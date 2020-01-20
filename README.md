@@ -73,7 +73,7 @@
     - selectors follow the *cascading rules*
 
 
-## Specifying Property Values
+### Specifying Property Values
 - css has a *lot* of ways to specify what you want a value to be
     - for example, you can say `font-size: x-large` or `font-size: 28pt` or `font-size: 1.5em`
 
