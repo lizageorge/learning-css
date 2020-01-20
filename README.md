@@ -27,10 +27,55 @@
         - **simple selectors** will select all the elemtns on the specified type
         - **id-selectors** will select all elements with the #id you use in your html file
         - **class selectors** selects everything of a certain class
+            ``` html
+            <div>
+                <p class="testClass"> eenie menie minie moe</p>
+            </div>
+            ```
+
+            ```css
+            .testClass{
+                background-color: coral;
+            }
+            ```
+        - **descendent selector** will target descendents in the html file
+            ```css
+            div p {
+                (any rule)
+            }
+            ```
+        - **child selector** will taret child elements ""
+            ```css
+            div > p {
+                (any rule)
+            }
+            ```
+            
+        ``` html
+        <div>
+            <form>
+                <p> I'm a descendent</p>
+            </form>
+            <p> I'm a child>
+        </div>
+        ```
+        - attribute selectors
+        - psuedo classes
     - you can select multiple elements by seperating a list with commas at the top of the block
     - selectors follow the *cascading rules*
 
 
+## Specifying Property Values
+- css has a *lot* of ways to specify what you want a value to be
+    - for example, you can say `font-size: x-large` or `font-size: 28pt` or `font-size: 1.5em`
+
+ - keywords (thin, thick, larger) = reserved words
+ - physical measurements (points - pt, picas - pc, mm/cm/in)
+ - screen measurements (pixels - px)
+ - relative measurements (%, em = of default size)
+ - color codes (#rrggbb, rbg(r, g, b))
+ - fonts (helvetica, sans-seriff)
+ - functional notation (specifying urls for background images)
 
 ### Specific styles to add
 - these are all from css 2.1, supported on most browsers (according to the pluralsight course I'm following, which is high key old). look in www.w3.org site for more.
