@@ -1,4 +1,6 @@
 # Learning CSS
+>January 19, 2020
+> using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
 ## Introduction to CSS
 
@@ -61,6 +63,12 @@
         ```
         - attribute selectors
         - psuedo classes
+        - star selector = using "*" will select just everything applicable
+        ```css 
+            *{
+                color: white;
+            }
+        ``` will change all text to be white.
     - you can select multiple elements by seperating a list with commas at the top of the block
     - selectors follow the *cascading rules*
 
@@ -76,6 +84,12 @@
  - color codes (#rrggbb, rbg(r, g, b))
  - fonts (helvetica, sans-seriff)
  - functional notation (specifying urls for background images)
+    ``` css
+    body{
+        background-color: white;
+        background-image: url("https://i.pinimg.com/originals/ba/0e/fa/ba0efaf6042fa4b279a36f343dac19fc.jpg");
+    }
+    ```
 
 ### Specific styles to add
 - these are all from css 2.1, supported on most browsers (according to the pluralsight course I'm following, which is high key old). look in www.w3.org site for more.
