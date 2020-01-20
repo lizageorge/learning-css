@@ -6,11 +6,13 @@
 
  - controls the style, formating of a webpage in an *external style sheet* that replaces a `<style>` tag
 	- now use a ```<link>``` tag instead, that can be put on any html file
-	``` html
-	<head>
-		<link rel="stylesheet" href="style.css"/>
-	</head>
-	```
+
+``` html
+<head>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+```
+
  - allows you to seperate the content and presentation of webpage = **single responsibility principle**
 
  - Imma make a site using github pages!
@@ -18,11 +20,12 @@
 ### Basic Style Rules
  - You add **rules** to specify values for the properties every html element has 
  - the basic principle for each **rule** in your stylesheet is to selet an html element, and then apply a style to it
-	```css
-		body{
-			background-color: blue;
-		}
-	```
+
+```css
+	body{
+		background-color: blue;
+	}
+```
 
 	- the "body" bit will select the body element in the html file to apply this to
 	- the next line is called a **propertyname-value pair**. 
@@ -32,56 +35,55 @@
    - **id-selectors** will select all elements with the #id you use in your html file
    - **class selectors** selects everything of a certain class 
 
-	```html
-	<div>
-		<p class="testClass"> eenie menie minie moe</p>
-	</div>
-	```
+```html
+<div>
+	<p class="testClass"> eenie menie minie moe</p>
+</div>
+```
 
-	```css
-	.testClass{
-		background-color: coral;
-	}
-	```
-	- you can also use `. {}` or `# {}` to reach all elements that have any class/id at all
+```css
+.testClass{
+	background-color: coral;
+}
+```
 
-	- **descendent selector** will target descendents in the html file
+- you can also use `. {}` or `# {}` to reach all elements that have any class/id at all
+- **descendent selector** will target descendents in the html file
 
-	```css
-	div p {}
-	```
-	- **child selector** will target child elements ""
-		
-	```css
-	div > p {}
-	```
+```css
+div p {}
+```
+- **child selector** will target child elements ""
 	
-	- **adjacent sibling selector** 
+```css
+div > p {}
+```
 	
-	```css
-	h1 + h2 {}
-	```
+- **adjacent sibling selector** 
 
-	```html
-	<div>
-		<form>
-			<p> I'm a descendent</p>
-		</form>
-		<p> I'm a child>
-	</div>
-	```
+```css
+h1 + h2 {}
+```
 
-	- attribute selectors
-	- psuedo classes (`:first-letter` or `:visited`)
-	- star selector = using "*" will select just everything applicable
+```html
+<div>
+	<form>
+		<p> I'm a descendent</p>
+	</form>
+	<p> I'm a child>
+</div>
+```
 
-	```css 
-		*{
-			color: white;
-		}
-	``` 
+- attribute selectors
+- psuedo classes (`:first-letter` or `:visited`)
+- star selector = using "*" will select just everything applicable
 
-		- will change all text to be white.
+```css 
+* {
+	color: white;
+}
+``` 
+
 - you can select multiple elements by seperating a list with commas at the top of the block
 - selectors follow the *cascading rules*
 
@@ -98,12 +100,12 @@
  - fonts (helvetica, sans-seriff)
  - functional notation (specifying urls for background images)
 
-	``` css
-	body{
-		background-color: white;
-		background-image: url("https://i.pinimg.com/originals/ba/0e/fa/ba0efaf6042fa4b279a36f343dac19fc.jpg");
-	}
-	```
+``` css
+body{
+	background-color: white;
+	background-image: url("https://i.pinimg.com/originals/ba/0e/fa/ba0efaf6042fa4b279a36f343dac19fc.jpg");
+}
+```
 
 ### Specific styles to add
 - these are all from css 2.1, supported on most browsers (according to the pluralsight course I'm following, which is high key old). look in www.w3.org site for more.
