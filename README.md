@@ -8,3 +8,6 @@
 
  - Imma make a site using github pages!
 
+ -the basic principle for your stylesheet is to selet an html element, and then apply a style to it
+ 
+
