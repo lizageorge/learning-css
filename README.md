@@ -1,5 +1,5 @@
 # Learning CSS
->January 19, 2020
+>January 19, March 16, 2020
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
 ## Introduction to CSS
@@ -121,12 +121,52 @@
 	- you can use `:link`, `:visited`, `:hover`, `:active` and `:focus` psuedo-classes as selectors to change what the link button text looks like    
 
 
-## Inheritence
-- the order in which you specify your rules will change what the computer will display in case any of those rules overlpa on any one property
-- basically, the last rule specified wins
-- but over that, specificity wins (` p {}` < `p.testClass {}`)
+## Cascading and Inheritance
+
+- How browser picks style for an element *from different sources*...
+	- the Author stylesheet ( <link> and @import) that the webpage creater makes
+	- User style sheet (no one really uses this anymore)
+	- Default styel sheet / User-agent stylesheets that come with the browser
+	- The browser *weights* the author > user > default stylesheet
+		 - The one exception to this is when `!important` is used (placed right before `;`). But this is high-key bad practice
+		 - Or if the html file has an in-line style statement that will override any linked stylesheet, but that's bad practice anyways
+
+- How browser picks style for an element from conflicting rules *in one style sheet*
+	- **the order in which you specify your rules** will change what the computer will display in case any of those rules overlap on any one property. The last rule specified wins (if you link multiple stylesheets into the html file, the last linked ss overrides)
+	- but over that, **specificity** wins 
+		- browsers give a speceficity rating to a rule based on whether you select using an id/class, div, *, etc. selector.
+		- (` p {}` < `p.testClass {}`)
+		- this only applied on a rule-to-rule basis; if you have one rule changing the background-colour and text-size with a selector `p` and another rule changing the background-colour with a `p.testClass` selector, the background color from the `p.testclass` rule and the text-size from the `p` rule.
+
+- Nested elements `inherit` styles from the nesting element as a default
+	- this will be overridden by rules for the nested element
+	- certain properties aren't inheritable, like border widths (usually font-related properties are inherited, but margins/padding/borders and stuff won't be inherited, duh)
+
+- If you look at the Developer Tools of a browser, overridden styles will have the strikethrough font
+
+### CSS Reset 
+	- = a way to override the user-agent stylesheet entirely so that a page can look the page between all browsers and browser versions
+	- every CSS framework (Bootstrap) includes a CSS Reset Stylesheet
 
 
+## The Box Model
+- Each visual elemenent renders in a box that has a margin, border, and padding (each of which can be specified differently for each side)
+	 - **margin** = space seperarting a box from the edge of the browser and other boxes
+	 - **border** = the edge of the box, can have a colour and a width
+	 - **padding** = the space between the inside edge of the box and the content
 
+- Each side of the margin/border/padding can have different property values
+	- there's a shortcut you can use for padding and margin where the values listed apply to the top, right, bottom and left sides respectively
+	- similarily, the border specifications apply to width, style and colour respectively
+	```css
+	ul{
+		padding-left: 10 px;
+		border-bottom-colour: 3px solid Black;
+		margin: 0 10 px 0 10 px;
+	}
+	```
+- when boxes are alligned vertically, they overlap 
+- Box width defaults to the whole window, but you can change the content size (with pixel specifications or percentages)
+	- this width applies to the *content* of the box, so margins/padding will add on to the specified width
 
-
+- Boxes can have a Diplay property (which can be block, inline, or none) and visibility (can be hidden )
