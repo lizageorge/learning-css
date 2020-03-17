@@ -1,0 +1,24 @@
+{
+  "name": "learning-css",
+  "version": "1.0.0",
+  "description": ">January 19, 2020\r > using the \"HTML&CSS\" book by Jon Duckett and the \"Introduction to CSS\" course by Scott Allen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizageorge/learning-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizageorge/learning-css/issues"
+  },
+  "homepage": "https://github.com/lizageorge/learning-css#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.16.0"
+  }
+}
