@@ -2,8 +2,6 @@
 >January 19, March 16, 2020
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
-## Introduction to CSS
-
 - controls the style, formating of a webpage in an *external style sheet* that replaces a `<style>` tag
 - now use a ```<link>``` tag instead, that can be put on any html file
 
