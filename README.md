@@ -1,5 +1,9 @@
 # Learning CSS
+<<<<<<< HEAD
 >January 19, March 16, 17, 2020
+=======
+>January 19, March 16, 2020
+>>>>>>> ddbdebcb2fd936bd56dee4417d352e5f2b632cb7
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
 ## Introduction to CSS
@@ -143,6 +147,7 @@
 	- certain properties aren't inheritable, like border widths (usually font-related properties are inherited, but margins/padding/borders and stuff won't be inherited, duh)
 
 - If you look at the Developer Tools of a browser, overridden styles will have the strikethrough font
+<<<<<<< HEAD
 
 ### CSS Reset 
 	- = a way to override the user-agent stylesheet entirely so that a page can look the page between all browsers and browser versions
@@ -187,4 +192,32 @@
 		- `letter-spacing`, `word-spacing`, `line-height`
 		- `text-decoration` (underline, strike-through)
 		- `text-transform`
+=======
+>>>>>>> ddbdebcb2fd936bd56dee4417d352e5f2b632cb7
 
+### CSS Reset 
+	- = a way to override the user-agent stylesheet entirely so that a page can look the page between all browsers and browser versions
+	- every CSS framework (Bootstrap) includes a CSS Reset Stylesheet
+
+
+## The Box Model
+- Each visual elemenent renders in a box that has a margin, border, and padding (each of which can be specified differently for each side)
+	 - **margin** = space seperarting a box from the edge of the browser and other boxes
+	 - **border** = the edge of the box, can have a colour and a width
+	 - **padding** = the space between the inside edge of the box and the content
+
+- Each side of the margin/border/padding can have different property values
+	- there's a shortcut you can use for padding and margin where the values listed apply to the top, right, bottom and left sides respectively
+	- similarily, the border specifications apply to width, style and colour respectively
+	```css
+	ul{
+		padding-left: 10 px;
+		border-bottom-colour: 3px solid Black;
+		margin: 0 10 px 0 10 px;
+	}
+	```
+- when boxes are alligned vertically, they overlap 
+- Box width defaults to the whole window, but you can change the content size (with pixel specifications or percentages)
+	- this width applies to the *content* of the box, so margins/padding will add on to the specified width
+
+- Boxes can have a Diplay property (which can be block, inline, or none) and visibility (can be hidden )
