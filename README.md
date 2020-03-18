@@ -1,5 +1,5 @@
 # Learning CSS
->January 19, March 16, 2020
+>January 19, March 16, 17, 2020
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
 ## Introduction to CSS
@@ -171,6 +171,20 @@
 
 - Boxes can have a Diplay property (which can be block, inline, or none) and visibility (can be hidden )
 
-
-
+## Styling Text with CSS
+- *Font*
+	 - browsers relly on the OS to provide fonts, and because certain fonts might not be supported by the OS, you provide a `font-family` in you style-sheet
+	 	- there are five font families (collections); serif (TNR), sans-serif (Arial), cursive(Comic sans ...wat), fantasy(Impact) and monospace (Courier new)
+	- you could also just specify a list of several specific fonts, seperated by commas and in order of preference, ended by the font-family (if there are spaces in the name of the font-family, put it in quotations)
+	- or, just specify `font` with a single font
+	- font is an inheritable quality
+	- you can also change `font-style` to be italic, and `font-weight` to be bold
+- *Font size*
+	 - you can use either aboslute control (wiht `px`) or relative sizing (with `em`)
+-*Text properties*
+	- applicable properties incl.
+		- `text-indent` (moves first sentence of para), `text-align` (center, justify)
+		- `letter-spacing`, `word-spacing`, `line-height`
+		- `text-decoration` (underline, strike-through)
+		- `text-transform`
 
