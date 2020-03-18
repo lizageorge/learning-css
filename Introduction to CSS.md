@@ -1,4 +1,4 @@
-  # Learning CSS
+  # Introduction to CSS
 >January 19, March 16, 2020
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
