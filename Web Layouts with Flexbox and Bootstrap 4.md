@@ -2,7 +2,10 @@
 >March 17, 2020
 > using "Bootstrap 4 for the Developer" by Mario Duilio Macari
 
-## How to install Bootstrap
+This course actually requires some introductory Bootstrap knowledge, wihch is why I'm going through *some* of Macari's course:
+# Introduction to Bootstrap
+
+## Setting up Bootstrap
 - (for today) Go to the boostrap site, click "Get started" and the quickstart template to get the JS needed to use BS's CDN (I'm using VS Code's extension Live Server to see immediate results)
 - alternatively, you could just install BS's libary and add them to your project manually
 - BS has a bunch of themes to purchase
