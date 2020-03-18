@@ -1,9 +1,5 @@
 # Learning CSS
-<<<<<<< HEAD
->January 19, March 16, 17, 2020
-=======
 >January 19, March 16, 2020
->>>>>>> ddbdebcb2fd936bd56dee4417d352e5f2b632cb7
 > using the "HTML&CSS" book by Jon Duckett and the "Introduction to CSS" course by Scott Allen
 
 ## Introduction to CSS
@@ -192,9 +188,7 @@
 		- `letter-spacing`, `word-spacing`, `line-height`
 		- `text-decoration` (underline, strike-through)
 		- `text-transform`
-=======
->>>>>>> ddbdebcb2fd936bd56dee4417d352e5f2b632cb7
-
+		
 ### CSS Reset 
 	- = a way to override the user-agent stylesheet entirely so that a page can look the page between all browsers and browser versions
 	- every CSS framework (Bootstrap) includes a CSS Reset Stylesheet
