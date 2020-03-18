@@ -191,3 +191,19 @@
 		- `text-decoration` (underline, strike-through)
 		- `text-transform`
 		
+## Page Layout with CSS
+- *Position Property*
+	- default = **static** = block-level elements are stacked one on top of another 
+	- **relative position** = you can set a number of pixels down and to the right from the flow a block should be (to top and left properties)
+	- **absolute** = set block in a specific position in the body
+	- **fixed** = set block in a specific position in the window
+	- elements can be overlapped or run off the window
+
+- *Float and Clear Properties*
+	- Float will allow block elements to sit to the side of another block in the flow
+	- Clear will break the side-by-side/floating flow
+
+- *Columned Layouts*
+	 - you can create a two-column layout using absolute positioning and margins
+	 - you can create a header similarily
+	 - nowadays frameworks like Bootsrap can make this much easier
