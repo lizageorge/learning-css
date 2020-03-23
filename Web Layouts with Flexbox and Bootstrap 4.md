@@ -1,5 +1,5 @@
 # Web Layous with Flexbox and Bootstrap 4
->March 17, 2020
+>March 17, 22, 2020
 > using "Bootstrap 4 for the Developer" by Mario Duilio Macari
 
 This course actually requires some introductory Bootstrap knowledge, wihch is why I'm going through *some* of Macari's course:
@@ -56,5 +56,14 @@ This course actually requires some introductory Bootstrap knowledge, wihch is wh
         </div>
     </div>
 ```
+
+- **Padding, Display and Margins**
+    - use values of 1, 2, 3, 4, or 5 with m/mt/mb/mr/ml/my/mx or p/pt/pb/pl/pb/py/px in the div class name. Those values refer to ratios with the actual content of the elements
+    - use d- in the div class name to change inline elements into block-level elements, or block-level elements into inline elements. 
+
+-**Using flexbox with bootstrap**
+    - all of the rules you would normally insert as css rules should go in the div class names
+    - this includes the container display:flex tags- use "d-" in the class name, *not as a display:flex css rule*.
+    - If you want a rule to only apply to certain breakpoints, include the breakpoint name in the class name rule
 
 - Bootstrap uses CSS's **Z-index feature** (that allows elements to have a z-axis value and be more easily layered) by assigning specific (and high) z-index values to page features like dropdowns, navbars, and backdrops. It's recommended that those higher values not be touched. They also use lower z-index values (1, 2, 3) to bring an element forward and highlight its border based on it's status (between defualt/hover/active states).
