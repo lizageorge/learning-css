@@ -8,6 +8,7 @@ This course actually requires some introductory Bootstrap knowledge, wihch is wh
 ## Setting up Bootstrap
 - (for today) Go to the boostrap site, click "Get started" and the quickstart template to get the JS needed to use BS's CDN (I'm using VS Code's extension Live Server to see immediate results)
 - alternatively, you could just install BS's libary and add them to your project manually
+    - you can pick and choose what files to include depending on how many bs features you're using (there's a mini-fied version for just the grid system, for example)
 - BS has a bunch of themes to purchase
 
 ## Graphic Design and Responsive Layout
