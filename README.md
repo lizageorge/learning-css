@@ -2,4 +2,5 @@
 
 ## Log:
 	- January 19 - March 17, 2020 = Introduction to CSS
-	- March 17 -     = Web Layouts with Flexbot and Bootstrap
+	- March 17 - March 25 = Introduction to Bootstrap    
+	- March 25 - = Web Layouts with Flexbot and Bootstrap
