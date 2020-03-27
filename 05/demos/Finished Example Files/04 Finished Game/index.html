@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Page</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- Game CSS -->
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+
+</head>
+<body>
+
+	<!-- Main Container -->
+	<div class="d-flex flex-row justify-content-around topBar">
+		<div class="py-3">
+			<p class="scoreLabel">SCORE: 0</p>
+		</div>
+		<div class="py-2">
+			<img src="images/SmallLogo.png" class="img-fluid smallLogo">
+		</div>
+		<div class="py-2">
+			<img src="images/leaderboard.png" class="leaderboard" onclick="showLeaderBoard()">
+		</div>
+	</div>
+
+	<!-- Game Board -->
+	<div class="container py-md-3 py-sm-1">
+		
+		<!-- Game Board -->
+		<div class="d-flex flex-row justify-content-around flex-wrap">
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(1)">100</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(2)">100</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(3)">100</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(4)">200</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(5)">200</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(6)">200</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(7)">500</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(8)">500</div>
+			<div class="gamePiece m-2 d-flex justify-content-center align-items-center" onclick="showQuestion(9)">500</div>
+		</div>
+		
+	</div>
+
+	<!-- Question Modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="questionModal">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Knowledge Check</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="d-flex flex-row">
+						<div class="imageCropper d-block">
+							<img src="images/forest.jpg" class="rounded-circle personIcon" id="questionImage">
+						</div>
+						<div class="ml-3 mt-2 align-items-center">
+							<p class="smallLabel" id="questionLabel">Small Label Goes Here....</p>
+							<h4 id="questionText">What is the answer to this question?</h4>
+						</div>
+					</div>
+					<div class="d-flex flex-column py-3">
+						<button type="button" class="btn btn-primary btn-lg btn-block" id="optionA" onclick="submitQuestion()">Option A</button>
+						<button type="button" class="btn btn-primary btn-lg btn-block" id="optionB" onclick="submitQuestion()">Option B</button>
+						<button type="button" class="btn btn-primary btn-lg btn-block" id="optionC" onclick="submitQuestion()">Option C</button>
+						<button type="button" class="btn btn-primary btn-lg btn-block" id="optionD" onclick="submitQuestion()">Option D</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Leaderboard Modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="leaderBoard">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Leaderboard</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="d-flex flex-row flex-wrap py-2 justify-content-center">
+						<div class="d-flex flex-column flex-fill align-items-center p-4 m-2 leaderCard">
+							<div class=" d-block">
+								<img src="images/jon.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">CEO</p>
+							<h4 class="nameText">Jon Davies</h4>
+						</div>
+						<div class="d-flex flex-column align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/jess.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Intern</p>
+							<h4 class="nameText">Jess Daines</h4>
+						</div>
+						<div class="d-flex flex-column align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/brant.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Cheif Engineer</p>
+							<h4 class="nameText">Brant Pease</h4>
+						</div>
+						<div class="d-flex flex-column align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/katie.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Team Leader</p>
+							<h4 class="nameText">Becky McGee</h4>
+						</div>
+						<div class="d-flex flex-column align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/dan.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Cheif Scientist</p>
+							<h4 class="nameText">Dan Anthony</h4>
+						</div>
+						<div class="d-flex flex-column align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/mckenzie.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Tech Lead</p>
+							<h4 class="nameText">McKenzie Dawn</h4>
+						</div>
+						<div class="d-flex flex-column flex-fill align-items-center p-4 m-2 leaderCard">
+							<div class="imageCropper d-block">
+								<img src="images/jimmy.jpg" class="rounded-circle personIcon" id="questionImage">
+							</div>
+							<p class="smallLabel pt-1">Security</p>
+							<h4 class="nameText">Jimmy Francis</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<!-- Game JS -->
+	<script src="js/content.js"></script>
+	<script src="js/game.js"></script>
+
+</body>
+</html>
