@@ -12,13 +12,13 @@ body{
 }
 
 #input{
-    flex: 1;
+    /* flex: 1; */
     /* background-color: burlywood; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 #inputLabel{
-    flex: 1.5;
+    /* flex: 1.5; */
     /* background-color: blue; */
 }
 

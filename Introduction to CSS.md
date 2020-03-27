@@ -205,3 +205,7 @@
 	 - you can create a two-column layout using absolute positioning and margins
 	 - you can create a header similarily
 	 - nowadays frameworks like Bootsrap can make this much easier
+
+
+##DevTools
+	- Chromium has a pretty neat set of developer tools. Check it out here! https://developers.google.com/web/tools/chrome-devtools/css
