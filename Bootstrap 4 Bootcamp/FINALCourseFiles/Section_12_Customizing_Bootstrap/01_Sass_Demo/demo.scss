@@ -1,0 +1,17 @@
+$bg-color: hsl(0, 100%, 80%);
+
+body {
+    background: $bg-color;
+}
+
+nav {
+    background: yellow;
+    font-size: 20px;
+    li {
+        background: green;
+        a{
+            background: purple;
+            font-size: 40px;
+        }
+    }
+}
