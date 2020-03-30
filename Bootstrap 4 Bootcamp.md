@@ -49,6 +49,8 @@
 
 ## Forms
 - use the `form-control` class in the input element tag (in the form element) for pretty styling. Don't forget a label for, type and placeholder
+    - if you want the input to include multiple elements (icons or buttons) use `input-group`
+    - if you want multiple inputs and inline forms, use `form-inline`, 
     - add `form-control-sm/lg` for different sizes
 - use the `form-group` classs name on a div element for nice pretty spacing 
 - with these two classes you can make any kind of form you want to (input, select, multipleselect, text area, range) and whatnot. The bs documentatin has a very handy guide.
@@ -56,4 +58,21 @@
     - use `form-check-inline` for inline options
 
 - you can customize certain visual elements of different forms to switch from the browser default visuals to a prettier bs verson with the class name `custom-control`. Add  `custom-checkbox` or `custom-radio` or `custom-file` or `custom-range`. *Look at the docs for full details*
-    - 
+
+
+## Navs and Navbars 
+- ### Making Navs
+    - navs are elements anywhere in the page
+     - start with a ul element with class `nav`. Each tab should be a child li element with `nav-item`, and a links with `nav-link`
+     - if you want the tabs to have an actual tab look, use `nav-tabs`, or `nav-pills` for a pill look
+     - use an `active` class on the active item to differentiate in tab/pill looks
+     - you can use the flexbox utilities on the tabs (left/right allign, vertically stack, spread out, etc.)
+     - you can also add `nav-fill` or `nav-justify` to make each tab take up all the available space or take up equal amt of space, respectively
+- ### Making Navbars
+    - navbars are the element at the top of a site, across every page, and can collapse into a hamburger
+    - start with a nav element with a class `navbar` (and corresponding colours and text-colours - navbar-dark create light text and navbar-light creates dark text)
+    - you can include a "brand" on the end of your navbar
+    - if you want the navbar to have be collapsable to a hamburger, you need to make a button to toggle that with `class="navbar-toggler"` and `data-toggle="collapse"` and `data-target="[id]"`, and then another div element with `collapse navrbar-collapse`, and inside that another class with `navbar-nav`. you can also have this collapsing happen at certain breakpoints! (*just look at the documentation omg*)
+    - you can add a button in the navbar, or an inline form or text. If you want it to collapse with the links, incl in the collapsing div. You can aso use flex utilities within a navbar. 
+    - you can put the content of a navbar into a div for a neater lewk
+    - positioning navbars; you can have a navbar be at the top (which is default), `fixed-top` (be sure to account for the space it takes up by putting a mt on the rest of the content's container), `fixed-bottom`, or `sticky-top` (which can allow content above it when scrolled to the top)
