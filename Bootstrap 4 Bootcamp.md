@@ -59,6 +59,25 @@
 
 - you can customize certain visual elements of different forms to switch from the browser default visuals to a prettier bs verson with the class name `custom-control`. Add  `custom-checkbox` or `custom-radio` or `custom-file` or `custom-range`. *Look at the docs for full details*
 
+- you can make forms responsive; use the grid system, but use `form-ro` in place of `row` (form row keeps the form-specific formatting and spacing). Each form question element would go in a seperate col. For example...
+``` html
+<div class="container">
+		<form>
+			<div class="form-row">
+				<div class="col-md-5">
+					<label for="hours">How many hours did you sleep last night?</label>
+					<input type="number" id="hours" class = "form-control" placeholder="hours slept"/>
+				</div>
+				<div class="col-md-7">
+					<label for="description">How well did you sleep?</label>
+					<input type="text" id="description" class = "form-control" placeholder="description of sleep"/>
+				</div>
+			</div>
+			
+		</form>
+	</div>
+```
+
 
 ## Navs and Navbars 
 - ### Making Navs
@@ -76,3 +95,52 @@
     - you can add a button in the navbar, or an inline form or text. If you want it to collapse with the links, incl in the collapsing div. You can aso use flex utilities within a navbar. 
     - you can put the content of a navbar into a div for a neater lewk
     - positioning navbars; you can have a navbar be at the top (which is default), `fixed-top` (be sure to account for the space it takes up by putting a mt on the rest of the content's container), `fixed-bottom`, or `sticky-top` (which can allow content above it when scrolled to the top)
+
+
+## The Grid System
+- = easy way to make responsive layout
+- containers are required (can be fluid), and so are rows. Elements will be arranged into columns
+- if you define a row with multiple columns, they will automatically be assigned to the same widths. To specify differnt widths, include `col-{width}`, where width in an int bween 1-12. Each row has 12 cols (if you have multiple undefined cols in a row with one col of specified width, the rest will split up evenly)
+- to make a row responsive, include a breakpoint in `col-{breakpoint}-{width}` - remember, this reads as "once {breakpoint} is hit, apply his rule", and that no breakpoints defaults to 'xs'
+- to **align an element**( = col/content), use the same flexbox rules: `align-items-` applied on the row aligns elementa vertically (`-stretch` is the default, other options are start and end) and `align-self` applies on each col independently, while `justify-content-` applied on the row alligns the cols horizontally (-`start` is the default, other options are end, center, between and around). Don't forget to use `d-flex` on whatver enveloping item necessary
+- if you include `offset{width}` on the class name of a col, it **offsets** the beginning of the element by that width. You can add breakpoins to these rules too. (This is the equivalent of having just an empty col to take up space)
+- you can **nest grids**, or put rows into col elements to further divide space. Remember, each *row* has 12 divisible units, not each display window
+
+
+## List Groups
+- use class `list-group`, and each li element will have `list-group-item`, or put `list-group-elemnt` and `list-group-item-action` on a tags to have an actionable list
+
+## Cards
+- = components that easily display info in a container
+- basic card structure:
+``` html
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">some title</h5>
+        <h6 class="card-subtitle text-muted mb-2">some subtitle</h6>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam expedita laborum facilis nesciunt voluptatibus omnis suscipit veritatis reprehenderit veniam delectus.</p>
+        <a href="" class="card-link">some link</a>
+    </div>
+</div>
+```
+- you can include images to be either in the top or bottom of the card (just insert the image tag right above the card body), or have it overlay the whole card (`use card-img-overlay` instead pf card-body)
+
+- you can render multiple cards into one element with split up space with card-groups or card-decks, but the responsivity isn't very customisable. There's also card-columns that uses Masonry
+
+
+## Javascript Components
+- **Alerts** = use the class `alert` and `role="alert"` to create a pop-up. If you want it dismissable, include `alert-dismissible` and a button with class set to `close` and `data-dismiss="alert" and html entity &times;  
+- **Modals** = a popup that can come in different styles. Use `modal` class, with `modal-dialog` and modal-content` in that. Also include a button trigger linked to it. 
+
+
+## Customizing Bootstrap
+- SASS/SCSS is a CSS compiler that allows you to write stylesheets in easier syntax and it will just spit out an uglier CSS file to work with. You can include vars and nesting structures in SCSS.
+- The Bootstrap source SCSS files can be found in the scss folder in the bootsrap folder if you install using the "Source Files" button from getbootstrap. Compiling the bootstrap.scss file compiles everything imported into it
+- create a custom scss file outside the bootstrap folder, and then use `@import: "../bootstrap/scc/bootstrap"` to import all of bootstrap. Now you can override certain properties (bc in the bs source code each element is set to !default! which means that the rule only applies if nothing else has been define yet). For example, if you want to customize the colours
+```css
+$theme-colors:{
+    "primary": #4whkj3h4,
+    "success": fiosdfoiud
+}
+@import: "../bootstrap/scc/bootstrap"
+```

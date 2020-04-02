@@ -15,10 +15,35 @@
 	
 	<div class="container">
 		<form>
-			<label for="hours">How many hours did you sleep last night?</label>
-			<input type="date" id="hours" class = "form-control" placeholder="hours slept"/>
+			<div class="form-row">
+				<div class="col-md-5">
+					<label for="hours">How many hours did you sleep last night?</label>
+					<input type="number" id="hours" class = "form-control" placeholder="hours slept"/>
+				</div>
+				<div class="col-md-7">
+					<label for="description">How well did you sleep?</label>
+					<input type="text" id="description" class = "form-control" placeholder="description of sleep"/>
+				</div>
+			</div>
+			
 		</form>
 	</div>
+
+	<div class="contatiner">
+		<div class="row">
+			<div class="col-6 offset-3">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">some title</h5>
+						<h6 class="card-subtitle text-muted mb-2">some subtitle</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam expedita laborum facilis nesciunt voluptatibus omnis suscipit veritatis reprehenderit veniam delectus.</p>
+						<a href="" class="card-link">some link</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 	<!-- Bootstrap Files -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
