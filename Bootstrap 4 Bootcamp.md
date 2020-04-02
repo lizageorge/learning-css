@@ -9,16 +9,18 @@
 
 - Some ppl think that all Bootstrap websites look the same, but it's totally possible to customize and add custom css elements for a more unique look
 
+## Bootstrap Components and Utilities
+
 - This course will just go through componenets and utilities one after another. So this just follows that order;
 
-## Buttons
+### Buttons
 - you can make pre-padded-rounded-corner buttons using `type=button` and the class name `btn` 
 - include a colour by following `btn-` with a colour name (or `btn-outline-[colour]`)
 - change size with `btn-lg` or `btn-sm`
 - have disabled or active states by incl the class name `active` or the attribute `disabled`
 - make regular links into butttons by incl the button class names after `a href="" `
 
-## Typography
+### Typography
 - use the utility classes `h1`-`h6` to get differently sized font-sizes and paddings
 - use the utility classes `display-1`-`display-6` to get differently sized font-sizes and paddings (this is for more central-looking headings)
 
@@ -30,24 +32,24 @@
 
 - use `text-right` (-left and -center) to align text on any text element
 
-## Jumbotrons
+### Jumbotrons
 - to include "hero-unit" text (think of a homepage title block)
 - use `class=jumbotron1` on the larger div, and incl headings, paras, horizontal lines, btns, etc. inside that
 - a fluid jumbotrol (`class = "jumbotron jumbotron-fluid"`) goes all the way across the page, and put a content inside that for all the content
 
-## Responsive Design
+### Responsive Design
 - the breakpoints are also utilities. They're set to fit different screen sizes (starting with mobile-porttrait) with different media queries (`@media (min-width: 576 px){...}`) labeled as `xs` , `sm`, `md`, `lg`, `xl` 
     - remember that xs is the default value, bc rules with the "xs" rule applies to everything. Once you include a breakpoint, that is overiden for the applicable size (for example, `class= "display-none display-sm-block"` means that the element will not be displayed, *until* the size is *at least sm*, from where it's displayed block)
 - you can use the display utility like the `display:...` rule from CSS, and if you include breakpoints (`class = "d-{value}-none/inline/block/fle/etc.`) you can have elements appear/disappear at those breakpoints. For example, a sidebar appearing only at sm, and staying as a hanburger before that
 
-## Borders and shadows
+### Borders and shadows
 - use `class = "border"` to include a border on any element
 - use `border-top/-bottom/-left/-right` to select sides. Or, you can use border-{size}-0 to remove a border on the respective side.
 - you can include a colour on a border
 - use the class name rounded to make the respective side's corner rounded, or rounded-circle
 - use `class="shadow-sm//lg` to include shadows. 
 
-## Forms
+### Forms
 - use the `form-control` class in the input element tag (in the form element) for pretty styling. Don't forget a label for, type and placeholder
     - if you want the input to include multiple elements (icons or buttons) use `input-group`
     - if you want multiple inputs and inline forms, use `form-inline`, 
@@ -79,15 +81,15 @@
 ```
 
 
-## Navs and Navbars 
-- ### Making Navs
+### Navs and Navbars 
+- #### Making Navs
     - navs are elements anywhere in the page
      - start with a ul element with class `nav`. Each tab should be a child li element with `nav-item`, and a links with `nav-link`
      - if you want the tabs to have an actual tab look, use `nav-tabs`, or `nav-pills` for a pill look
      - use an `active` class on the active item to differentiate in tab/pill looks
      - you can use the flexbox utilities on the tabs (left/right allign, vertically stack, spread out, etc.)
      - you can also add `nav-fill` or `nav-justify` to make each tab take up all the available space or take up equal amt of space, respectively
-- ### Making Navbars
+- #### Making Navbars
     - navbars are the element at the top of a site, across every page, and can collapse into a hamburger
     - start with a nav element with a class `navbar` (and corresponding colours and text-colours - navbar-dark create light text and navbar-light creates dark text)
     - you can include a "brand" on the end of your navbar
@@ -97,7 +99,7 @@
     - positioning navbars; you can have a navbar be at the top (which is default), `fixed-top` (be sure to account for the space it takes up by putting a mt on the rest of the content's container), `fixed-bottom`, or `sticky-top` (which can allow content above it when scrolled to the top)
 
 
-## The Grid System
+### The Grid System
 - = easy way to make responsive layout
 - containers are required (can be fluid), and so are rows. Elements will be arranged into columns
 - if you define a row with multiple columns, they will automatically be assigned to the same widths. To specify differnt widths, include `col-{width}`, where width in an int bween 1-12. Each row has 12 cols (if you have multiple undefined cols in a row with one col of specified width, the rest will split up evenly)
@@ -107,10 +109,10 @@
 - you can **nest grids**, or put rows into col elements to further divide space. Remember, each *row* has 12 divisible units, not each display window
 
 
-## List Groups
+### List Groups
 - use class `list-group`, and each li element will have `list-group-item`, or put `list-group-elemnt` and `list-group-item-action` on a tags to have an actionable list
 
-## Cards
+### Cards
 - = components that easily display info in a container
 - basic card structure:
 ``` html
