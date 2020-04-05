@@ -112,7 +112,7 @@
 ### List Groups
 - use class `list-group`, and each li element will have `list-group-item`, or put `list-group-elemnt` and `list-group-item-action` on a tags to have an actionable list
 
-### Cards
+##  # Cards
 - = components that easily display info in a container
 - basic card structure:
 ``` html
