@@ -1,5 +1,5 @@
 # The Bootstrap 4 Bootcamp
->March 29 2020
+> March 29 - April 4 2020
 > using "The Bootstrap 4 Bootcamp" by Colt Steele
 
 - Bootstrap comes in tree parts;
