@@ -1,4 +1,5 @@
-## This is where I will compile all of my notes on various Pluralsight courses on CSS.
+# Learning CSS
+## This is where I will compile all of my notes on various Pluralsight on CSS and Bootstrap.
 
 ## Log:
 	- January 19 - March 17, 2020 = Introduction to CSS
