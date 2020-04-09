@@ -22,7 +22,7 @@
 
 ### Typography
 - use the utility classes `h1`-`h6` to get differently sized font-sizes and paddings
-- use the utility classes `display-1`-`display-6` to get differently sized font-sizes and paddings (this is for more central-looking headings)
+- use the utility classes `display-1`-`display-4` to get differently sized font-sizes and paddings (this is for more central-looking headings)
 
 - there are tags for in-line styling (mark, del, s, ins, u, small, strong and em)
 
