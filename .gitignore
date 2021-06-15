@@ -1,0 +1,8 @@
+node_modules/
+
+# removing files that I used to study/follow courses, but weren't my own code to share
+
+02/
+Bootstrap 4 Bootcamp/
+.Refactoring UI v1.0.2.pdf
+Web Layouts with Flexbox ExFiles/
